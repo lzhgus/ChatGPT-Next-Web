@@ -7,8 +7,6 @@ declare global {
       CODE?: string;
       PROXY_URL?: string;
       VERCEL?: string;
-      SPEECH_SUB_KEY?: string;
-      SPEECH_REGION?: string;
     }
   }
 }
@@ -40,7 +38,5 @@ export const getServerSideConfig = () => {
     needCode: ACCESS_CODES.size > 0,
     proxyUrl: process.env.PROXY_URL,
     isVercel: !!process.env.VERCEL,
-    ttsKey: process.env.SPEECH_SUB_KEY,
-    ttsRegion: process.env.SPEECH_REGION,
   };
 };
