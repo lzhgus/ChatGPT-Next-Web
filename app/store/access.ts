@@ -28,7 +28,7 @@ export const useAccessStore = create<AccessControlStore>()(
       token: "",
       accessCode: "",
       ttsKey: "",
-      ttsRegion: "eastus",
+      ttsRegion: "",
       needCode: true,
       enabledAccessControl() {
         get().fetch();
