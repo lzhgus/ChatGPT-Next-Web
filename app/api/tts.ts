@@ -18,7 +18,7 @@ export async function speak(
   const audioConfig = AudioConfig.fromSpeakerOutput(player);
   const speechConfig = SpeechConfig.fromSubscription(
     accessStore.ttsKey ?? "",
-    accessStore.ttsRegion ?? "eastus",
+    "eastus",
   );
   speechConfig.speechSynthesisVoiceName =
     getLang() === "cn" ? "zh-CN-XiaoxiaoNeural" : "en-US-AriaNeural";
