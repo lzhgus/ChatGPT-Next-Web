@@ -6,9 +6,9 @@ import {
   SpeechSynthesisResult,
 } from "microsoft-cognitiveservices-speech-sdk";
 import { getLang } from "../locales";
+import { getServerSideConfig } from "../config/server";
 
-const SUB_KEY = process.env.SPEECH_SUB_KEY ?? "";
-const REGION = process.env.SPEECH_REGION ?? "";
+const config = getServerSideConfig();
 
 export async function speak(
   text: string,
@@ -17,7 +17,10 @@ export async function speak(
   if (!text) return;
   const player = new SpeakerAudioDestination();
   const audioConfig = AudioConfig.fromSpeakerOutput(player);
-  const speechConfig = SpeechConfig.fromSubscription(SUB_KEY, REGION);
+  const speechConfig = SpeechConfig.fromSubscription(
+    config.speakerKey ?? "",
+    config.speakerRegion ?? "",
+  );
   speechConfig.speechSynthesisVoiceName =
     getLang() === "cn" ? "zh-CN-XiaoxiaoNeural" : "en-US-AriaNeural";
   const synthesizer = new SpeechSynthesizer(speechConfig, audioConfig);
