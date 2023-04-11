@@ -7,9 +7,10 @@ export interface AccessControlStore {
 
   needCode: boolean;
 
-  speechKey: string;
+  ttsKey: string;
+  ttsRegion: string;
 
-  updateSpeechKey: (_: string) => void;
+  updateTtsKey: (_: string) => void;
   updateToken: (_: string) => void;
   updateCode: (_: string) => void;
   enabledAccessControl: () => boolean;
@@ -26,7 +27,8 @@ export const useAccessStore = create<AccessControlStore>()(
     (set, get) => ({
       token: "",
       accessCode: "",
-      speechKey: "",
+      ttsKey: "",
+      ttsRegion: "eastus",
       needCode: true,
       enabledAccessControl() {
         get().fetch();
@@ -39,8 +41,8 @@ export const useAccessStore = create<AccessControlStore>()(
       updateToken(token: string) {
         set((state) => ({ token }));
       },
-      updateSpeechKey(key: string) {
-        set((state) => ({ speechKey: key }));
+      updateTtsKey(key: string) {
+        set((state) => ({ ttsKey: key }));
       },
       isAuthorized() {
         // has token or has code or disabled access control

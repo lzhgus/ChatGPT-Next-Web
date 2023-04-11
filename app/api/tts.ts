@@ -17,7 +17,7 @@ export async function speak(
   const player = new SpeakerAudioDestination();
   const audioConfig = AudioConfig.fromSpeakerOutput(player);
   const speechConfig = SpeechConfig.fromSubscription(
-    accessStore.speechKey ?? "",
+    accessStore.ttsKey ?? "",
     "eastus",
   );
   speechConfig.speechSynthesisVoiceName =

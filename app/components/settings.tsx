@@ -352,11 +352,11 @@ export function Settings(props: { closeSettings: () => void }) {
             subTitle={Locale.Settings.TTS.SubTitle}
           >
             <PasswordInput
-              value={accessStore.speechKey}
+              value={accessStore.ttsKey}
               type="text"
               placeholder={Locale.Settings.TTS.Placeholder}
               onChange={(e) => {
-                accessStore.updateSpeechKey(e.currentTarget.value);
+                accessStore.updateTtsKey(e.currentTarget.value);
               }}
             />
           </SettingItem>
