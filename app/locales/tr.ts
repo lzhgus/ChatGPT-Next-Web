@@ -120,6 +120,12 @@ const tr: LocaleType = {
       SubTitle: "Erişim kodu sınırını yoksaymak için anahtarınızı kullanın",
       Placeholder: "OpenAI API Anahtarı",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle:
+        "After filling in the key, you can use Azure TTS for speech synthesis.",
+      Placeholder: "Azure TTS Key",
+    },
     Usage: {
       Title: "Hesap Bakiyesi",
       SubTitle(used: any, total: any) {

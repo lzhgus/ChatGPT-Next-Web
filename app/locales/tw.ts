@@ -117,6 +117,11 @@ const tw: LocaleType = {
       SubTitle: "使用自己的 Key 可規避授權訪問限制",
       Placeholder: "OpenAI API Key",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle: "填写key后，可以使用Azure TTS进行语音合成",
+      Placeholder: "Azure TTS Key",
+    },
     Usage: {
       Title: "帳戶餘額",
       SubTitle(used: any, total: any) {

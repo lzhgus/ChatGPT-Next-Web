@@ -117,6 +117,11 @@ const cn = {
       SubTitle: "使用自己的 Key 可绕过密码访问限制",
       Placeholder: "OpenAI API Key",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle: "填写key后，可以使用Azure TTS进行语音合成",
+      Placeholder: "Azure TTS Key",
+    },
     Usage: {
       Title: "余额查询",
       SubTitle(used: any, total: any) {

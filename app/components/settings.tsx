@@ -347,6 +347,20 @@ export function Settings(props: { closeSettings: () => void }) {
         </List>
 
         <List>
+          <SettingItem
+            title={Locale.Settings.TTS.Title}
+            subTitle={Locale.Settings.TTS.SubTitle}
+          >
+            <PasswordInput
+              value={accessStore.speechKey}
+              type="text"
+              placeholder={Locale.Settings.TTS.Placeholder}
+              onChange={(e) => {
+                accessStore.updateSpeechKey(e.currentTarget.value);
+              }}
+            />
+          </SettingItem>
+
           {enabledAccessControl ? (
             <SettingItem
               title={Locale.Settings.AccessCode.Title}

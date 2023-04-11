@@ -120,6 +120,12 @@ const es: LocaleType = {
       SubTitle: "Utiliza tu clave para ignorar el límite de código de acceso",
       Placeholder: "Clave de la API de OpenAI",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle:
+        "After filling in the key, you can use Azure TTS for speech synthesis.",
+      Placeholder: "Azure TTS Key",
+    },
     Usage: {
       Title: "Saldo de la cuenta",
       SubTitle(used: any, total: any) {

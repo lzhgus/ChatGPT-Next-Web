@@ -121,6 +121,12 @@ const it: LocaleType = {
         "Utilizzare la chiave per ignorare il limite del codice di accesso",
       Placeholder: "OpenAI API Key",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle:
+        "After filling in the key, you can use Azure TTS for speech synthesis.",
+      Placeholder: "Azure TTS Key",
+    },
     Usage: {
       Title: "Bilancio Account",
       SubTitle(used: any, total: any) {

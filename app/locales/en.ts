@@ -134,6 +134,12 @@ const en: LocaleType = {
       SubTitle: "Access control enabled",
       Placeholder: "Need Access Code",
     },
+    TTS: {
+      Title: "TTS Key",
+      SubTitle:
+        "After filling in the key, you can use Azure TTS for speech synthesis.",
+      Placeholder: "Azure TTS Key",
+    },
     Model: "Model",
     Temperature: {
       Title: "Temperature",
